@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lacak IP, jangan disebarkan atau web ini kebanned</title>
+  <title>Pelacak alamat</title>
   <style>
     body {
       margin: 0;
@@ -43,15 +43,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain; /* Adjust to fit screen without cropping */
+      background-color: black; /* fill background for empty spaces */
       display: none;
+    }
+
+    /* For larger screens like laptops */
+    @media (min-width: 768px) {
+      #displayImage {
+        object-fit: cover; /* Fill screen on bigger displays */
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Tekan Tombol dibawah</h1>
-  <p>volume tolong di full in, agar terdeteksi informasi hp karena volume bisa memperbesar area lacak</p>
-  <button id="showBtn">Mulai Pelacakan</button>
+  <h1>Made By F4</h1>
+  <p>tutorial : volume kalo bisa max, jadi range lacaknya bisa jauh</p>
+  <button id="showBtn">Mulai</button>
   <img id="displayImage" src="anjay 123.webp" alt="Your Image" />
   <audio id="bgAudio" src="Jumpscare Sound (mp3cut.net).mp3" loop></audio>
 
